@@ -1,26 +1,15 @@
-import React from 'react';
-
-// console.log(process.env.REACT_APP_API_KEY)
-
- 
-
-
+import React from "react";
 
 function Form(props) {
+  return (
+    <div className="form">
+      <form onSubmit={props.handleSubmition}>
+        Enter City{" "}
+        <input type="text" onChange={props.handleSearches} value={props.city} />
+        <button>Submit</button>
+      </form>
+    </div>
+  );
+}
 
-   
-
-  
-    return (    
-       <>
-        <form onSubmit={props.handleSubmit} >
-  Enter city: <input type="text" onChange={props.handleSearch} value={props.city} />
-            <button type="submit">Submit</button>
-        </form>
-       </>
-      
-    );
-  }
-  
-  export default Form;
-  
+export default Form;
