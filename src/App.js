@@ -28,9 +28,10 @@ function App() {
     const weatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKEY}`;
     fetch(weatherURL)
       .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        setWeatherResult(data);
+      .then((results) => {
+        console.log(results);
+        setWeatherResult(results);
+        
       });
 
     setCity("");
@@ -44,7 +45,7 @@ function App() {
         city={city}
       />
       <Hero />
-      <WeatherContainer />
+      <WeatherContainer weatherInfo={weatherResult} />
     </div>
   );
 }
