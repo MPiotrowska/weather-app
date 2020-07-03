@@ -4,7 +4,7 @@ function Form(props) {
   return (
     <div className="form">
       <form onSubmit={props.handleSubmition}>
-        Enter City{" "}
+        <span>Enter City </span>
         <input type="text" onChange={props.handleSearches} value={props.city} />
         <button>Submit</button>
       </form>
