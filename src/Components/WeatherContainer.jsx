@@ -13,7 +13,7 @@ const getSvg = (text) => {
       return thermometerSVG;
     case "Description":
       return sunSVG;
-    case "Wind":
+    default:
       return windSVG;
   }
 };
