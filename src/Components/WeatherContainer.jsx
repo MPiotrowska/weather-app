@@ -1,5 +1,4 @@
 import React from "react";
-import humiditySVG from "../Images/humidity.svg";
 import sunSVG from "../Images/sun.svg";
 import windSVG from "../Images/wind.svg";
 import thermometerSVG from "../Images/thermometer.svg";
@@ -20,8 +19,6 @@ const getSvg = (text) => {
 };
 
 function Column(props) {
-  console.log(props.icon);
-
   const hasIcon = props.icon;
 
   return (
@@ -32,10 +29,11 @@ function Column(props) {
             src={`https://openweathermap.org/img/wn/${props.icon}@2x.png`}
             width="25"
             height="25"
+            alt=""
           />
         ) : (
           <img
-            class="svg"
+            className="svg"
             src={getSvg(props.text)}
             alt=""
             width="20"
