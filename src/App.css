@@ -94,7 +94,42 @@ h2 {
   left: 50%;
   transform: translateX(-50%);
 
+
 }
+
+.input {
+  position:relative;
+  font-size: 1rem;
+  line-height: 1.45rem;
+  display: block;
+  padding: 15px 18px;
+  margin-top: 0.33333rem;
+  width: 100%;
+  border: 0.2rem solid #fafafa;
+  box-shadow: none;
+  outline: none;
+  border-radius: 0;
+  appearance: none;
+  transition: all 0.33333s ease-in-out;
+  min-width: 800px;
+  border-radius: 9px;
+}
+
+.inputContainer {
+  position: relative;
+}
+
+.submitBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background: transparent;
+  border: 0;
+  padding: 20px;
+}
+
+
 
 .weatherContainer {
   position: absolute;
