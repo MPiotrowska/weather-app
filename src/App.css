@@ -33,10 +33,17 @@ h2 {
 }
 
 
+
+
 .svg {
   filter: invert(1);
   margin-right: 5px;
 }
+
+.svg.Humidity {
+  filter: initial;
+}
+
 
 .svg-container {
   display: flex;
@@ -77,12 +84,15 @@ h2 {
   position: absolute;
   bottom: 300px;
   left: 50px;
+
 }
 
 @media only screen and (max-width: 767px) {
   .city-date-container {
     position: absolute;
     bottom: 450px;
+    left: 50%;
+transform: translateX(-50%);
   }
 }
 
@@ -119,6 +129,7 @@ h2 {
 @media only screen and (min-width: 1280px) {
   .input {
     min-width: 800px;
+    padding: 10px 18px;
   }
 }
 
@@ -151,7 +162,7 @@ h2 {
   
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 800px) {
   .weatherContainer__inner {
     width: 100vw;
   }
@@ -167,9 +178,12 @@ h2 {
 @media only screen and (max-width: 767px) {
   .parametersBox {
     flex-direction: column;
-    padding: 0;
+    padding: 20px;
+    align-content: center;
   }
-}
+
+  }
+
 
 @media only screen and (max-width: 767px) {
   .weatherParameters {
@@ -186,4 +200,17 @@ h2 {
 .smallerBox {
   flex: 1 1 auto;
  
+ 
 }
+@media only screen and (max-width: 767px) {
+  .smallerBox {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid grey;
+  }
+  .smallerBox:last-child {
+    border-bottom: 0;
+  }
+}
+

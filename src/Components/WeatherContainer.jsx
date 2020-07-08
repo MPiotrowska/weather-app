@@ -2,13 +2,14 @@ import React from "react";
 import sunSVG from "../Images/sun.svg";
 import windSVG from "../Images/wind.svg";
 import thermometerSVG from "../Images/thermometer.svg";
+import humiditySVG from "../Images/humidity.svg"
 import { kelvinToCelsius, meterToHour, convertToKm } from '../helpers/converters';
 
 
 const getSvg = (text) => {
   switch (text) {
     case "Humidity":
-      return windSVG;
+      return humiditySVG;
     case "Visibility":
       return thermometerSVG;
     case "Description":
@@ -33,7 +34,7 @@ function Column(props) {
           />
         ) : (
           <img
-            className="svg"
+            className={`svg ${props.text}`}
             src={getSvg(props.text)}
             alt=""
             width="20"
