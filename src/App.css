@@ -111,8 +111,15 @@ h2 {
   border-radius: 0;
   appearance: none;
   transition: all 0.33333s ease-in-out;
-  min-width: 800px;
   border-radius: 9px;
+  max-width: 100%;
+  min-width: 350px;
+}
+
+@media only screen and (min-width: 1280px) {
+  .input {
+    min-width: 800px;
+  }
 }
 
 .inputContainer {
